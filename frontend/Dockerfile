@@ -1,29 +1,39 @@
-FROM node:18-alpine
+tax-main-frontend-backup
+/
+8052c8d
+Jul 18, 2025, 2:58 PM
+Active
 
-WORKDIR /app
 
-# Copy package files from the build context
-# Since Railway sets build context to repo root, we need to copy from frontend/
-COPY frontend/package*.json ./
+Details
+Build Logs
+Deploy Logs
 
-# Install dependencies
-RUN npm install
+Filter
+Filter logs using "", (), AND, OR, -
 
-# Copy frontend source code
-COPY frontend/ .
 
-# Set environment variables
-ENV CI=false
-ENV GENERATE_SOURCEMAP=false
 
-# Build the app
-RUN npm run build
+You reached the start of the range → Jul 18, 2025, 2:58 PM
 
-# Install serve
-RUN npm install -g serve
+Starting Container
 
-# Expose port
-EXPOSE $PORT
+npm warn config production Use `--omit=dev` instead.
 
-# Start the app - Use Railway's PORT environment variable
-CMD ["sh", "-c", "serve -s build -l ${PORT:-3000}"]
+ 
+
+> taxbox-ai-frontend@1.0.0 start
+
+> react-scripts start
+
+ 
+
+(node:22) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+(node:22) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+
+Starting the development server...
+
+ 
